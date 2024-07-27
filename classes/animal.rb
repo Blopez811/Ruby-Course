@@ -28,7 +28,4 @@ class Animal
     @@total_animals
   end
 
-  def self.create_a_pig
-    Animal.new(noise: 'Oink', color: 'Blue')
-  end
 end

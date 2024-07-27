@@ -2,6 +2,11 @@
 
 require_relative "classes/person"
 require_relative "classes/animal"
+require_relative "classes/pig"
+require_relative "classes/cow"
+require_relative "classes/duck"
+
+
 
 person = Person.new
 person.first_name = "Bob"
@@ -24,15 +29,27 @@ Animal.species.each do |type|
 end
 
 
-wilbur = Animal.create_a_pig
+wilbur = Pig.new
+betsy = Cow.new 
+donald = Duck.new
+
+wilbur.eat
+betsy.jump
+donald.fly
+
 
 puts wilbur.noise
+puts betsy.noise
+puts donald.noise
 
 puts '----------'
 
 
 puts Animal.total_animals
+puts '----------'
 
+
+puts betsy.noise
 Animal.species = ['cat','mouse','moose']
 
 Animal.species.each do |type|
